@@ -1,3 +1,4 @@
+//野呂さんが作ったアニメーションを自分なりの方法で作成
 public class Anime_i extends Anime {
   int quantity = 24;
   float moveSpeed = 5;

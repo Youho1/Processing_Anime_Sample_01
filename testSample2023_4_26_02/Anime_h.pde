@@ -1,3 +1,4 @@
+//野呂さんが作ったアニメーションを自分なりの方法で作成
 public class Anime_h extends Anime {
   final float minAngle = 0;
   final float maxAngle = PI;

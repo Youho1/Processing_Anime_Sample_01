@@ -64,6 +64,12 @@ void keyPressed() {
   else if (key == 'l') {
     animes.add(new Anime_i());
   }
+  else if (key == 'z') {
+    animes.add(new Anime_j());
+  }
+  else if (key == 'x') {
+    animes.add(new Anime_k());
+  }
   if (animes.size()>num) {
     animes.remove(0);
   }
