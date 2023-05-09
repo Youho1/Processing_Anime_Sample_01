@@ -6,7 +6,7 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
 Minim minim;
-final int num = 6;
+final int num = 11;
 AudioSample[] se = new AudioSample[num];
 ArrayList<Anime> animes = new ArrayList<Anime>();
 
@@ -14,7 +14,7 @@ void setup() {
   size(800,600);
   minim = new Minim(this);
   for (int i=0;i<num;i++) {
-    String sename = "se" + i + ".wav";
+    String sename = "/sounds/se" + i + ".wav";
     println(sename);
     se[i] = minim.loadSample(sename);
   }
@@ -56,18 +56,23 @@ void keyPressed() {
     animes.add(new Anime_f());
   }
   else if (key == 'j') {
+    se[6].trigger();
     animes.add(new Anime_g());
   }
   else if (key == 'k') {
+    se[7].trigger();
     animes.add(new Anime_h());
   }
   else if (key == 'l') {
+    se[8].trigger();
     animes.add(new Anime_i());
   }
   else if (key == 'z') {
+    se[9].trigger();
     animes.add(new Anime_j());
   }
   else if (key == 'x') {
+    se[10].trigger();
     animes.add(new Anime_k());
   }
   if (animes.size()>num) {
