@@ -23,14 +23,34 @@ public class Anime_e extends Anime {
     draw_y += _y_axis_draw_speed;
   }
   //星を描画するメソッド 引数x軸　y軸　回転速度
-  private void draw_Star(final float axis_x, final float axis_y, final float rotateSpeed)
+  private void draw_Star(final float x, final float y, final float rotateSpeed)
   {
     pushMatrix();
-    translate(axis_x, axis_y);
+    translate(x, y);
     fill(yellow);
+    //stroke(yellow);
     rotate(radians(rotateSpeed));
-    triangle(-3*size/2, sqrt(3)*size/2, 0, -sqrt(3) * size, 3*size/2, sqrt(3) * size / 2);
+    triangle(-3*size/2, sqrt(3)*size/2, 0, -sqrt(3) * size, 3*size/2, sqrt(3)*size/2);
     triangle(-3*size/2, -sqrt(3)*size/2, 0, sqrt(3) * size, 3*size/2, -sqrt(3)*size/2);
+    /*
+    ArrayList<PVector> pointlist = new ArrayList<PVector>();
+    for(int theta = 0; theta <= 720; theta = theta + 144)
+    {
+      var rad = radians(theta);
+      var point = new PVector(cos(rad) * size + x, sin(rad) * size + y);
+      pointlist.add(point);
+    }
+    draw_lines(pointlist);
+    */
     popMatrix();
   }
+  /*
+  private void draw_lines(ArrayList<PVector> points)
+  {
+    for (int index = 0;index < points.size() - 1;index++)
+    {
+      line(points.get(index).x, points.get(index).y, points.get(index + 1).x, points.get(index + 1).y);
+    }
+  }
+  */
 }

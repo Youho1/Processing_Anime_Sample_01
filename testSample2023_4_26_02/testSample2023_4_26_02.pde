@@ -55,6 +55,15 @@ void keyPressed() {
     se[5].trigger();
     animes.add(new Anime_f());
   }
+  else if (key == 'j') {
+    animes.add(new Anime_g());
+  }
+  else if (key == 'k') {
+    animes.add(new Anime_h());
+  }
+  else if (key == 'l') {
+    animes.add(new Anime_i());
+  }
   if (animes.size()>num) {
     animes.remove(0);
   }
